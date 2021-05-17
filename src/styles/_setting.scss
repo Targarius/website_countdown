@@ -1,0 +1,39 @@
+$errorColor: #EE8B8B;
+$linearColor: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+$titleColor: #423A3A;
+$textColor: #CE9898;
+$white: #fff;
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 22px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+input{
+    font-size: 16px;
+    font-family: inherit;
+    color: rgba(66, 58, 58, 1);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    background-color: $white;
+    border: solid 1px $textColor;
+    border-radius: 28px;
+}
+
+input:focus{
+    opacity: 1;
+    outline: none;
+}
+

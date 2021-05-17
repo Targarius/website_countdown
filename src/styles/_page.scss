@@ -1,0 +1,163 @@
+
+.website{
+    display: flex;
+    flex-direction: column;
+    color: $textColor;
+    background: rgb(255,255,255);
+    background: linear-gradient(150deg, rgba(255,255,255,1) 0%, rgba(255,244,244,1) 84.51%);
+}
+
+.desktop_bg{
+    display: none;
+}
+
+//! /////////////////// MB VERSION ///////////////////////////
+
+//* ///////////////////BRAND CONTAINER /////////////////////
+
+.brand_container{
+    order: 1;
+    margin: 2rem 2rem;
+}
+
+//* ///////////////////CONTENT CONTAINER /////////////////////
+
+.content_container{
+    order: 3;
+    padding: 0 2rem;
+    margin-bottom: 0.5rem;
+    
+    h1{
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 40px;
+        line-height: 1.05;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        color: $titleColor;
+
+        span{
+            font-weight: 300;
+            color: $textColor;
+        }
+    }
+
+    p{
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.57;
+    }
+
+    .email_catcher{
+        position: relative;
+
+        input{
+            display: block;
+            width: 100%;
+            padding: .7rem 1.5rem;
+            color: rgba(66, 58, 58, 1);
+
+            &::placeholder{
+                font-size: 14px;
+                color: $textColor;
+            }
+        }
+
+        // input:invalid{
+        //     border: solid 2px $errorColor;
+        // }
+
+        .btn_validate{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 7px 1.5rem;
+            background: $linearColor;
+            border: solid 1px $textColor;
+            border-radius: 28px;
+            box-shadow: 0 15px 20px 0 rgba(198, 110, 110, 0.24);
+        }
+
+        .error_svg{
+            position: absolute;
+            right: 23%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+        }
+    }
+}
+
+.error_text{
+    order: 4;
+    margin-left: 3.5rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    font-size: 13px;
+    color: $errorColor;
+}
+
+//* ///////////////////IMG CONTAINER /////////////////////
+
+.img_container{
+    order: 2;
+    margin-bottom: 2rem;
+}
+
+//! ////////////////// MEDIA QUERIES (DESKTOP) //////////////////////
+
+@media only screen and (min-width: 600px){
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .website{
+        max-width: 1440px;
+        max-height: 800px;
+        display: grid;
+        grid-template-columns: 2fr auto;
+        grid-template-rows: 20% auto;
+        box-shadow: 0 0 20px 0 rgb(156, 156, 156);
+    }
+
+    .brand_container{
+        margin: 4.5rem auto 8.5rem 10rem;
+    }
+
+    .content_container{
+        margin: 0 13.75rem 0 10rem;
+        padding: 0;
+
+        h1{
+            font-size: 4rem;
+            text-align: left;
+        }
+
+        p{
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .email_catcher{
+    
+            input{
+                font-size: 1rem;
+                padding: 1rem 2rem;
+            }
+
+            .btn_validate{
+                padding: 12px 2rem;
+            }
+        }
+    }
+
+    .img_container img{
+        max-width: 610px;
+    }
+}
