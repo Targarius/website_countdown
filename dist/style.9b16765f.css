@@ -51,7 +51,7 @@ input:focus {
 .content_container {
   order: 3;
   padding: 0 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2.5rem;
 }
 .content_container h1 {
   margin-bottom: 1rem;
@@ -67,7 +67,7 @@ input:focus {
   font-weight: 300;
   color: #CE9898;
 }
-.content_container p {
+.content_container .text_content {
   margin-bottom: 2rem;
   text-align: center;
   font-size: 14px;
@@ -99,18 +99,16 @@ input:focus {
 }
 .content_container .email_catcher .error_svg {
   position: absolute;
-  right: 23%;
+  right: 0;
   top: 50%;
+  margin-right: 4rem;
   transform: translate(-50%, -50%);
-  opacity: 0;
+  opacity: 1;
 }
-
-.error_text {
-  order: 4;
-  margin-left: 3.5rem;
-  margin-bottom: 3rem;
-  opacity: 0;
+.content_container .error_text {
+  margin: 0.5rem 0 0 1.6rem;
   font-size: 13px;
+  opacity: 1;
   color: #EE8B8B;
 }
 
@@ -120,6 +118,17 @@ input:focus {
 }
 
 @media only screen and (min-width: 600px) {
+  .content_container {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+  }
+
+  .img_container {
+    height: 400px;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 1050px) {
   body {
     height: 100vh;
     display: flex;
@@ -128,29 +137,52 @@ input:focus {
   }
 
   .website {
-    max-width: 1440px;
-    max-height: 800px;
+    max-width: 1000px;
+    height: 600px;
     display: grid;
-    grid-template-columns: 2fr auto;
-    grid-template-rows: 20% auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 20% 80%;
     box-shadow: 0 0 20px 0 #9c9c9c;
   }
 
   .brand_container {
-    margin: 4.5rem auto 8.5rem 10rem;
+    margin: 2.5rem auto 0 5rem;
   }
 
   .content_container {
-    margin: 0 13.75rem 0 10rem;
+    max-width: 425px;
+    margin: 1.5rem 6.5rem 0 5rem;
     padding: 0;
   }
   .content_container h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-align: left;
   }
-  .content_container p {
-    font-size: 1rem;
+  .content_container .text_content {
+    font-size: 0.975rem;
     text-align: left;
+  }
+}
+@media only screen and (min-width: 1460px) {
+  .website {
+    max-width: 1440px;
+    height: 800px;
+    grid-template-columns: 2fr auto;
+  }
+
+  .brand_container {
+    margin: 4.5rem auto 0 10rem;
+  }
+
+  .content_container {
+    max-width: 450px;
+    margin: 5rem 13.75rem 0 10rem;
+  }
+  .content_container h1 {
+    font-size: 4rem;
+  }
+  .content_container .text_content {
+    font-size: 1rem;
   }
   .content_container .email_catcher input {
     font-size: 1rem;
@@ -159,9 +191,18 @@ input:focus {
   .content_container .email_catcher .btn_validate {
     padding: 12px 2rem;
   }
+  .content_container .email_catcher .error_svg {
+    margin-right: 5rem;
+  }
+  .content_container .error_text {
+    margin-left: 2.2rem;
+    font-size: 0.875rem;
+  }
 
-  .img_container img {
+  .img_container {
     max-width: 610px;
+    height: auto;
+    overflow: visible;
   }
 }
 
